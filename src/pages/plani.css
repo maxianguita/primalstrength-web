@@ -67,18 +67,22 @@
   transform: translateY(-3px);
 }
 .plani-back {
+  position: absolute;
+  top: 15px;
+  left: 15px;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  font-size: 1.4rem;
   color: #fff;
-  background: #c42112;
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
+  background: transparent;   /* sin fondo */
+  border: none;
   text-decoration: none;
-  margin-bottom: 1rem;
-  transition: background 0.2s ease;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .plani-back:hover {
-  background: #8f160d;
+  color: #c42112;   /* rojo de marca */
+  transform: translateX(-2px); /* pequeño movimiento hacia la izquierda */
 }

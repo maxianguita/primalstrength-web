@@ -60,7 +60,7 @@
 }
 .sub-icon {
   margin-right: 0.5rem;
-  color: var(--color-principal, #c42112); /* fallback si no definiste variable */
+  color: var(--color-principal, #c42112); 
 }
 
 /* Botonera */
@@ -69,16 +69,17 @@
   grid-template-columns: 1fr;
   gap: 0.85rem;
   width: 100%;
-  max-width: 320px;            /* mobile ancho cómodo */
+  max-width: 320px;            
   margin: 0 auto 1.25rem auto;
 }
 .home-buttons button,
+
 .home-buttons a {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.95rem;
-  padding: 0.95rem 1rem;       /* botones más grandes en mobile */
+  padding: 0.95rem 1rem;      
   background-color: #f3f2f5;
   color: #0b0101;
   border: none;

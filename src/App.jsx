@@ -1,6 +1,6 @@
+// src/App.jsx
 import { HashRouter, Routes, Route } from "react-router-dom";
-
-import Home from "./pages/Home"; 
+import Home from "./pages/Home";
 import Plani from "./pages/Plani";
 
 function App() {
@@ -8,8 +8,10 @@ function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/planificaciones" element={<Plani />} />
+        <Route path="/plani" element={<Plani />} />
       </Routes>
     </HashRouter>
   );
 }
+
+export default App;

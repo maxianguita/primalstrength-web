@@ -5,16 +5,13 @@ import {
   FaRunning, 
   FaCalendarAlt, 
   FaDumbbell, 
-  FaBolt, 
- 
+  FaBolt 
 } from "react-icons/fa";
 
 import LogoImg from "../assets/Logo.jpg"; 
 import "./home.css";
-import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-     const navigate = useNavigate();
   return (
     <div className="home-container">
       {/* Contenedor principal */}
@@ -26,44 +23,34 @@ const Home = () => {
         <h1 className="home-title">@primalstrength</h1>
 
         {/* Subtítulos */}
-      <div className="home-subtitles">
-  <span><FaDumbbell className="sub-icon" /> Centro de Salud y Fuerza</span>
-  <span><FaBolt className="sub-icon" /> Powerlifting</span>
-  
-</div>
+        <div className="home-subtitles">
+          <span><FaDumbbell className="sub-icon" /> Centro de Salud y Fuerza</span>
+          <span><FaBolt className="sub-icon" /> Powerlifting</span>
+        </div>
+
         {/* Botones grid */}
-        
-<div className="home-buttons">
-<button >
-  <a href="/planificaciones" className="home-btn">
-  <FaCalendarAlt className="btn-icon" /> Planificaciones
-</a>
+        <div className="home-buttons">
 
-</button>
+          <a href="/#/plani" target="_blank" rel="noopener noreferrer">
+            <FaCalendarAlt className="btn-icon" /> Planificaciones
+          </a>
 
+          <a href="https://wa.me/5491144443751" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp className="btn-icon" /> Nuestro Whatsapp
+          </a>
 
+          <a href="https://www.instagram.com/primalstrength.jh/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className="btn-icon" /> Seguinos Instagram
+          </a>
 
-  <button onClick={() => window.open("https://wa.me/5491144443751", "_blank")}>
-    <FaWhatsapp className="btn-icon" /> Nuestro Whatsapp
-  </button>
-  
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+            <FaFacebookF className="btn-icon" /> Seguinos Facebook
+          </a>
 
-
- <button 
-  onClick={() => window.open("https://www.instagram.com/primalstrength.jh/", "_blank")}
->
-  <FaInstagram className="btn-icon" /> Seguinos Instagram
-</button>
-
-
-
-  <button>
-    <FaFacebookF className="btn-icon" />  Seguinos Facebook
-  </button>
-  <button>
-    <FaRunning className="btn-icon" /> Transformate en atleta
-  </button>
-</div>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <FaRunning className="btn-icon" /> Transformate en atleta
+          </a>
+        </div>
 
         {/* Icono Instagram */}
         <a

@@ -7,8 +7,9 @@ const Plani = () => {
     <div className="plani-container">
       {/* Flecha volver */}
       <Link to="/" className="plani-back">
-        <FaArrowLeft /> Volver al Home
-      </Link>
+  <FaArrowLeft />
+</Link>
+
 
       <h1 className="plani-title">Planificaciones Powerlifting</h1>
       <p className="plani-sub">
