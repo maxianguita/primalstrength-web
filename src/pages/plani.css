@@ -1,0 +1,68 @@
+.plani-container {
+  min-height: 100vh;
+  background-color: #111212;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.plani-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.plani-sub {
+  color: #aaa;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+.plani-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.plani-card {
+  background: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.plani-card:hover {
+  transform: translateY(-5px);
+  background: #222;
+}
+
+.plani-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #a10a05;
+}
+
+.plani-btn {
+  margin-top: 3rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: #f5f1f1;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.plani-btn:hover {
+  background: #a10a05;
+  color: #fff;
+  transform: translateY(-3px);
+}

@@ -1,0 +1,174 @@
+/* Contenedor principal */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #111212; 
+  color: #fff; 
+  font-family: Arial, sans-serif;
+  background-image: 
+  linear-gradient(#2c2c2c , transparent ),
+  linear-gradient(90deg, #2c2c2c , transparent );
+  
+}
+
+.home-subtitles {
+  display: flex;
+ flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.sub-icon {
+  margin-right: 0.5rem;
+  color: var(--color-principal); 
+}
+
+
+/* Contenido central */
+.home-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  flex-grow: 1;            
+  padding: 1rem 10rem;      
+}
+
+
+/* Logo */
+.home-logo {
+  width: 128px;
+  height: 128px;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #c42112;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-logo:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Título */
+.home-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Subtítulos */
+.home-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.home-buttons button {
+  display: flex;
+  align-items: center;      /* centra verticalmente */
+  justify-content: center;  /* centra texto e icono */
+  gap: 0.95rem;             /* espacio entre icono y texto */
+  padding: 0.75rem 1rem;
+  background-color: #f3f2f5;
+  color: rgb(11, 1, 1);
+  border: none;
+  border-radius: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.home-buttons button:hover {
+  background-color: #504c4c;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1.2rem; /* tamaño del icono */
+}
+
+/* Instagram icon */
+.home-instagram {
+  font-size: 2rem;
+  color: #e1306c;
+  margin: 1.5rem 0;
+  transition: transform 0.2s ease;
+}
+
+.home-instagram:hover {
+  transform: scale(1.1);
+  color: #a10a05;
+}
+
+@keyframes pulse {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+
+
+/* Botón unir */
+.home-join {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 3rem;
+  background-color: #f5f1f1;
+  color: #070707;
+  border: none;
+  border-radius: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  animation: pulse 1.2s infinite;
+ }
+
+.home-join:hover {
+  background-color: #504c4c;
+    color: #fff;
+    transform: translateX(-50%) translateY(-2px);
+}
+
+/* Footer */
+.home-footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+  color: #faf6f6;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.home-footer span {
+  cursor: pointer;
+}
+
+.home-footer span:hover {
+  color: #fef9f9;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .home-subtitles {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .home-buttons {
+    max-width: 200px;
+  }
+}
