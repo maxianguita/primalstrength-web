@@ -1,9 +1,15 @@
 import "./plani.css";
-import { FaDumbbell, FaChartLine, FaCalendarAlt } from "react-icons/fa";
+import { FaDumbbell, FaChartLine, FaCalendarAlt, FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Plani = () => {
   return (
     <div className="plani-container">
+      {/* Flecha volver */}
+      <Link to="/" className="plani-back">
+        <FaArrowLeft /> Volver al Home
+      </Link>
+
       <h1 className="plani-title">Planificaciones Powerlifting</h1>
       <p className="plani-sub">
         Entrená con una estructura organizada, progresiva y minimalista.

@@ -34,8 +34,11 @@ const Home = () => {
         {/* Botones grid */}
         
 <div className="home-buttons">
-<button onClick={() => window.open("/planificaciones", "_blank")}>
+<button >
+  <a href="/planificaciones" className="home-btn">
   <FaCalendarAlt className="btn-icon" /> Planificaciones
+</a>
+
 </button>
 
 
