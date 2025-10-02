@@ -1,174 +1,196 @@
-/* Contenedor principal */
+/* ============ Base global del Home (mobile-first) ============ */
 .home-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #111212; 
-  color: #fff; 
-  font-family: Arial, sans-serif;
-  background-image: 
-  linear-gradient(#2c2c2c , transparent ),
-  linear-gradient(90deg, #2c2c2c , transparent );
-  
-}
-
-.home-subtitles {
-  display: flex;
- flex-direction: column;
-  gap: 0.7rem;
-  align-items: center;
+  background-color: #111212;
   color: #fff;
-  font-weight: 500;
-  padding: 10px;
-}
+  font-family: Arial, sans-serif;
 
-.sub-icon {
-  margin-right: 0.5rem;
-  color: var(--color-principal); 
+  /* Patrón sutil */
+  background-image:
+    linear-gradient(#2c2c2c, transparent),
+    linear-gradient(90deg, #2c2c2c, transparent);
 }
-
 
 /* Contenido central */
 .home-main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
-  flex-grow: 1;            
-  padding: 1rem 10rem;      
+  justify-content: center;     /* centrado vertical en pantallas altas */
+  flex-grow: 1;
+  padding: 1.5rem 1rem;        /* mobile: menos padding lateral */
+  gap: 1.25rem;                /* aire entre bloques */
 }
-
 
 /* Logo */
 .home-logo {
-  width: 128px;
-  height: 128px;
-  margin-bottom: 1.5rem;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 0.75rem;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #c42112;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .home-logo:hover {
-  transform: scale(1.15);
+  transform: scale(1.12);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* Título */
 .home-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;           /* mobile */
+  font-weight: 800;
+  text-align: center;
 }
 
-/* Subtítulos */
+/* Subtítulos con iconos */
+.home-subtitles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  padding: 6px 0;
+  text-align: center;
+}
+.sub-icon {
+  margin-right: 0.5rem;
+  color: var(--color-principal, #c42112); /* fallback si no definiste variable */
+}
+
+/* Botonera */
 .home-buttons {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.75rem;
+  gap: 0.85rem;
   width: 100%;
-  max-width: 420px;
-  margin: 0 auto 1.5rem auto;
+  max-width: 320px;            /* mobile ancho cómodo */
+  margin: 0 auto 1.25rem auto;
 }
-
-.home-buttons button {
+.home-buttons button,
+.home-buttons a {
   display: flex;
-  align-items: center;      /* centra verticalmente */
-  justify-content: center;  /* centra texto e icono */
-  gap: 0.95rem;             /* espacio entre icono y texto */
-  padding: 0.75rem 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.95rem;
+  padding: 0.95rem 1rem;       /* botones más grandes en mobile */
   background-color: #f3f2f5;
-  color: rgb(11, 1, 1);
+  color: #0b0101;
   border: none;
   border-radius: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  text-decoration: none;       /* por si usás <a> estilado como botón */
 }
-
-.home-buttons button:hover {
+.home-buttons button:hover,
+.home-buttons a:hover {
   background-color: #504c4c;
   color: #fff;
   transform: translateY(-2px);
 }
+.btn-icon { font-size: 1.1rem; }
 
-.btn-icon {
-  font-size: 1.2rem; /* tamaño del icono */
-}
-
-/* Instagram icon */
+/* Instagram icon suelto (si lo mantenés) */
 .home-instagram {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #e1306c;
-  margin: 1.5rem 0;
-  transition: transform 0.2s ease;
+  margin: 1.25rem 0;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
-
 .home-instagram:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   color: #a10a05;
 }
 
+/* CTA fijo (flotante) */
 @keyframes pulse {
-  0% { transform: translateX(-50%) scale(1); }
-  50% { transform: translateX(-50%) scale(1.1); }
+  0%   { transform: translateX(-50%) scale(1); }
+  50%  { transform: translateX(-50%) scale(1.08); }
   100% { transform: translateX(-50%) scale(1); }
 }
-
-
-/* Botón unir */
 .home-join {
   position: fixed;
-  bottom: 50px;
+  bottom: 20px;                /* mobile: más cercano al borde inferior */
   left: 50%;
   transform: translateX(-50%);
-  padding: 0.75rem 3rem;
+  width: min(90%, 420px);      /* ancho responsive */
+  padding: 0.9rem 1rem;
   background-color: #f5f1f1;
   color: #070707;
   border: none;
   border-radius: 0.9rem;
-  font-weight: bold;
+  font-weight: 800;
   cursor: pointer;
   z-index: 1000;
   animation: pulse 1.2s infinite;
- }
-
+}
 .home-join:hover {
   background-color: #504c4c;
-    color: #fff;
-    transform: translateX(-50%) translateY(-2px);
+  color: #fff;
+  transform: translateX(-50%) translateY(-2px); /* mantiene el centro */
 }
 
 /* Footer */
 .home-footer {
   text-align: center;
-  padding: 1rem 0;
-  font-size: 0.875rem;
+  padding: 0.8rem 0.5rem;
+  font-size: 0.8rem;
   color: #faf6f6;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid #2a2a2a;
   display: flex;
+  flex-direction: column;      /* mobile: apilado */
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.35rem;
+}
+.home-footer span { cursor: pointer; }
+.home-footer span:hover { color: #fef9f9; }
+
+/* ============ Breakpoints ============ */
+
+/* Tablets medianas */
+@media (min-width: 601px) and (max-width: 900px) {
+  .home-main { padding: 2rem 1.5rem; }
+  .home-title { font-size: 1.9rem; }
+  .home-buttons { max-width: 380px; }
+  .home-join {
+    bottom: 28px;
+    width: min(88%, 500px);
+  }
 }
 
-.home-footer span {
-  cursor: pointer;
-}
+/* Desktop */
+@media (min-width: 901px) {
+  .home-main { padding: 2rem 6rem; }
+  .home-title { font-size: 2rem; }
+  .home-buttons {
+    max-width: 420px;
+    gap: 0.75rem;
+  }
+  .home-logo {
+    width: 128px;
+    height: 128px;
+    margin-bottom: 1rem;
+  }
+  .home-subtitles { gap: 0.6rem; }
+  .home-instagram { font-size: 2rem; }
 
-.home-footer span:hover {
-  color: #fef9f9;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .home-subtitles {
-    flex-direction: column;
-    gap: 0.5rem;
+  .home-join {
+    bottom: 40px;              /* un poco más arriba en desktop */
+    width: auto;               /* deja que tome su ancho natural */
+    padding: 0.8rem 2.2rem;
   }
 
-  .home-buttons {
-    max-width: 200px;
+  .home-footer {
+    flex-direction: row;       /* desktop: en línea */
+    gap: 1rem;
+    font-size: 0.875rem;
+    padding: 1rem 0;
   }
 }
