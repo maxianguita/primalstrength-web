@@ -7,21 +7,28 @@
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem;
+  position: relative; /* necesario para la flecha */
 }
 
+/* Título */
 .plani-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.8rem;   /* más chico en mobile */
+  font-weight: 800;
+  text-align: center;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
+/* Subtítulo */
 .plani-sub {
   color: #aaa;
   margin-bottom: 2rem;
   text-align: center;
   max-width: 600px;
+  font-size: 1rem;
 }
 
+/* Grid de cards */
 .plani-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -30,6 +37,7 @@
   max-width: 900px;
 }
 
+/* Card */
 .plani-card {
   background: #1c1c1c;
   padding: 1.5rem;
@@ -37,18 +45,19 @@
   text-align: center;
   transition: transform 0.3s ease, background 0.3s ease;
 }
-
 .plani-card:hover {
   transform: translateY(-5px);
   background: #222;
 }
 
+/* Icono */
 .plani-icon {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
   color: #a10a05;
 }
 
+/* Botón descarga */
 .plani-btn {
   margin-top: 3rem;
   padding: 0.75rem 2rem;
@@ -60,12 +69,13 @@
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 .plani-btn:hover {
   background: #a10a05;
   color: #fff;
   transform: translateY(-3px);
 }
+
+/* Flecha volver */
 .plani-back {
   position: absolute;
   top: 15px;
@@ -75,14 +85,32 @@
   justify-content: center;
   font-size: 1.4rem;
   color: #fff;
-  background: transparent;   /* sin fondo */
+  background: transparent;
   border: none;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.2s ease, transform 0.2s ease;
 }
-
 .plani-back:hover {
   color: #c42112;   /* rojo de marca */
-  transform: translateX(-2px); /* pequeño movimiento hacia la izquierda */
+  transform: translateX(-2px);
+}
+
+/* 📱 Responsive */
+@media (min-width: 601px) and (max-width: 900px) {
+  .plani-title {
+    font-size: 2rem;
+  }
+  .plani-sub {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 901px) {
+  .plani-title {
+    font-size: 2.4rem;
+  }
+  .plani-sub {
+    font-size: 1.2rem;
+  }
 }
