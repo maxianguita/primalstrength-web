@@ -67,7 +67,7 @@ img { max-width: 100%; display: block; }
 /* Pasos */
 .team-steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:4px 0 36px; }
 .step{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px; display:flex; gap:12px; align-items:flex-start; box-shadow:var(--shadow); }
-.step__num{ width:34px; height:34px; border-radius:50%; background:linear-gradient(135deg,var(--brand),#5d46ff); display:grid; place-items:center; font-weight:800; }
+.step__num{ width:44px; height:34px; border-radius:50%; background:linear-gradient(125deg,var(--brand),#020202); display:grid; place-items:center; font-weight:800; }
 .step__content h4{ margin:0 0 4px; }
 .step__content p{ margin:0; color:var(--muted); }
 
