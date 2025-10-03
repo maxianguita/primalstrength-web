@@ -35,9 +35,14 @@ const Plani = () => {
       </div>
 
       {/* Descarga directa */}
-      <a href="/planificacion_powerlifting_full.pdf" download className="plani-btn">
-        Descargar Planificación
-      </a>
+      <a
+  href="/planificacion_powerlifting_full.pdf"
+  download="planificacion_powerlifting_full.pdf"
+  className="plani-btn"
+>
+  Descargar Planificación
+</a>
+
     </div>
   );
 };
