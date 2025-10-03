@@ -19,10 +19,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;     /* centrado vertical en pantallas altas */
+  justify-content: center;     
   flex-grow: 1;
-  padding: 1.5rem 1rem;        /* mobile: menos padding lateral */
-  gap: 1.25rem;                /* aire entre bloques */
+  padding: 1.5rem 1rem 120px;   /* 👈 padding-bottom extra para que los links no queden tapados */
+  gap: 1.25rem;                
 }
 
 /* Logo */
@@ -42,7 +42,7 @@
 
 /* Título */
 .home-title {
-  font-size: 1.6rem;           /* mobile */
+  font-size: 1.6rem;           
   font-weight: 800;
   text-align: center;
 }
@@ -73,7 +73,6 @@
   margin: 0 auto 1.25rem auto;
 }
 .home-buttons button,
-
 .home-buttons a {
   display: flex;
   align-items: center;
@@ -87,7 +86,9 @@
   font-weight: 700;
   cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
-  text-decoration: none;       /* por si usás <a> estilado como botón */
+  text-decoration: none;       
+  position: relative;   /* 👈 necesario para aplicar z-index */
+  z-index: 1101;        /* 👈 siempre por encima del botón flotante */
 }
 .home-buttons button:hover,
 .home-buttons a:hover {
@@ -97,12 +98,14 @@
 }
 .btn-icon { font-size: 1.1rem; }
 
-/* Instagram icon suelto (si lo mantenés) */
+/* Instagram icon suelto */
 .home-instagram {
   font-size: 1.8rem;
   color: #e1306c;
   margin: 1.25rem 0;
   transition: transform 0.2s ease, color 0.2s ease;
+  position: relative;
+  z-index: 1;  /* 👈 debajo de los botones */
 }
 .home-instagram:hover {
   transform: scale(1.08);
@@ -117,10 +120,10 @@
 }
 .home-join {
   position: fixed;
-  bottom: 20px;                /* mobile: más cercano al borde inferior */
+  bottom: 20px;                
   left: 50%;
   transform: translateX(-50%);
-  width: min(90%, 420px);      /* ancho responsive */
+  width: min(90%, 420px);      
   padding: 0.9rem 1rem;
   background-color: #f5f1f1;
   color: #070707;
@@ -134,7 +137,7 @@
 .home-join:hover {
   background-color: #504c4c;
   color: #fff;
-  transform: translateX(-50%) translateY(-2px); /* mantiene el centro */
+  transform: translateX(-50%) translateY(-2px); 
 }
 
 /* Footer */
@@ -145,7 +148,7 @@
   color: #faf6f6;
   border-top: 1px solid #2a2a2a;
   display: flex;
-  flex-direction: column;      /* mobile: apilado */
+  flex-direction: column;      
   justify-content: center;
   align-items: center;
   gap: 0.35rem;
@@ -157,7 +160,7 @@
 
 /* Tablets medianas */
 @media (min-width: 601px) and (max-width: 900px) {
-  .home-main { padding: 2rem 1.5rem; }
+  .home-main { padding: 2rem 1.5rem 140px; } /* 👈 más espacio en tablets */
   .home-title { font-size: 1.9rem; }
   .home-buttons { max-width: 380px; }
   .home-join {
@@ -168,7 +171,7 @@
 
 /* Desktop */
 @media (min-width: 901px) {
-  .home-main { padding: 2rem 6rem; }
+  .home-main { padding: 2rem 6rem 160px; } /* 👈 padding extra abajo */
   .home-title { font-size: 2rem; }
   .home-buttons {
     max-width: 420px;
@@ -183,13 +186,13 @@
   .home-instagram { font-size: 2rem; }
 
   .home-join {
-    bottom: 40px;              /* un poco más arriba en desktop */
-    width: auto;               /* deja que tome su ancho natural */
+    bottom: 40px;              
+    width: auto;               
     padding: 0.8rem 2.2rem;
   }
 
   .home-footer {
-    flex-direction: row;       /* desktop: en línea */
+    flex-direction: row;       
     gap: 1rem;
     font-size: 0.875rem;
     padding: 1rem 0;

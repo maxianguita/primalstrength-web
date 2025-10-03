@@ -40,8 +40,11 @@ const Home = () => {
           </a>
 
           <a href="https://www.instagram.com/primalstrength.jh/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram className="btn-icon" /> Seguinos Instagram
-          </a>
+         
+          <FaInstagram className="btn-icon" /> Seguinos Instagram
+         </a>
+
+         
 
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
             <FaFacebookF className="btn-icon" /> Seguinos Facebook
