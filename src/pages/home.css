@@ -198,3 +198,46 @@
     padding: 1rem 0;
   }
 }
+/* ================= Animaciones logo (solo móvil) ================= */
+
+/* Respeto accesibilidad: si el usuario prefiere menos movimiento, no animamos */
+@media (max-width: 600px) {
+  @media (prefers-reduced-motion: no-preference) {
+
+    /* Variante A — LATIR (scale suave) */
+    .home-logo {
+      animation: heartbeat 1.6s ease-in-out infinite;
+      will-change: transform, box-shadow;
+    }
+    @keyframes heartbeat {
+      0%   { transform: scale(1);       box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+      25%  { transform: scale(1.06);    box-shadow: 0 14px 30px rgba(0,0,0,0.18); }
+      40%  { transform: scale(1);       box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+      60%  { transform: scale(1.06);    box-shadow: 0 14px 30px rgba(0,0,0,0.18); }
+      100% { transform: scale(1);       box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+    }
+
+    /* Variante B — TITILAR (parpadeo sutil). 
+       👉 Si preferís esta, quitá la animación de .home-logo arriba
+       y aplicá esta clase alternativa en el JSX: className="home-logo logo-blink" */
+    .logo-blink {
+      animation: blink 1.8s ease-in-out infinite;
+      will-change: opacity;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      40%      { opacity: .82; }
+      50%      { opacity: .66; }
+      60%      { opacity: .82; }
+    }
+  }
+}
+
+/* En desktop mantenemos el hover que ya tenías */
+@media (min-width: 901px) {
+  .home-logo:hover {
+    transform: scale(1.12);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+}
+

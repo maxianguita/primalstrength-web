@@ -10,6 +10,7 @@ import {
 
 import LogoImg from "../assets/Logo.jpg"; 
 import "./home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
       {/* Contenedor principal */}
       <div className="home-main">
         {/* Logo */}
-        <img src={LogoImg} alt="Primal Strange Logo" className="home-logo" />
+        <img src={LogoImg} alt="Primal Strength Logo" className="home-logo" />
 
         {/* Título */}
         <h1 className="home-title">@primalstrength</h1>
@@ -30,32 +31,33 @@ const Home = () => {
 
         {/* Botones grid */}
         <div className="home-buttons">
-
-          <a href="/#/plani" target="_blank" rel="noopener noreferrer">
+          {/* Link interno a Planificaciones */}
+          <Link to="/plani" className="home-link">
             <FaCalendarAlt className="btn-icon" /> Planificaciones
-          </a>
+          </Link>
 
-          <a href="https://wa.me/5491144443751" target="_blank" rel="noopener noreferrer">
+          {/* WhatsApp */}
+          <a href="https://wa.me/541138986902" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp className="btn-icon" /> Nuestro Whatsapp
           </a>
 
+          {/* Instagram */}
           <a href="https://www.instagram.com/primalstrength.jh/" target="_blank" rel="noopener noreferrer">
-         
-          <FaInstagram className="btn-icon" /> Seguinos Instagram
-         </a>
+            <FaInstagram className="btn-icon" /> Seguinos Instagram
+          </a>
 
-         
-
+          {/* Facebook */}
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
             <FaFacebookF className="btn-icon" /> Seguinos Facebook
           </a>
 
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <FaRunning className="btn-icon" /> Transformate en atleta
-          </a>
+          {/* Link interno a Teams */}
+          <Link to="/teams" className="home-link">
+            <FaRunning className="btn-icon" /> Sumate a nuestro Team
+          </Link>
         </div>
 
-        {/* Icono Instagram */}
+        {/* Icono Instagram flotante */}
         <a
           href="https://www.instagram.com/primalstrength.jh/"
           target="_blank"
@@ -66,7 +68,7 @@ const Home = () => {
         </a>
 
         {/* Botón unir */}
-        <button className="home-join">Únete a Primal Strange</button>
+        <button className="home-join">Comprar Merch</button>
       </div>
 
       {/* Footer */}

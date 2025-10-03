@@ -5,11 +5,9 @@ import { Link } from "react-router-dom";
 const Plani = () => {
   return (
     <div className="plani-container">
-      {/* Flecha volver */}
       <Link to="/" className="plani-back">
-  <FaArrowLeft />
-</Link>
-
+        <FaArrowLeft />
+      </Link>
 
       <h1 className="plani-title">Planificaciones Powerlifting</h1>
       <p className="plani-sub">
@@ -17,21 +15,18 @@ const Plani = () => {
       </p>
 
       <div className="plani-grid">
-        {/* Bloque 1 */}
         <div className="plani-card">
           <FaDumbbell className="plani-icon" />
           <h2>Fuerza Máxima</h2>
           <p>Rutinas de squat, bench y deadlift con progresión semanal.</p>
         </div>
 
-        {/* Bloque 2 */}
         <div className="plani-card">
           <FaChartLine className="plani-icon" />
           <h2>Periodización</h2>
           <p>Ciclos diseñados para picos de fuerza en competencias.</p>
         </div>
 
-        {/* Bloque 3 */}
         <div className="plani-card">
           <FaCalendarAlt className="plani-icon" />
           <h2>Seguimiento</h2>
@@ -39,7 +34,10 @@ const Plani = () => {
         </div>
       </div>
 
-      <button className="plani-btn">Descargar Planificación</button>
+      {/* Descarga directa */}
+      <a href="/planificacion_powerlifting_full.pdf" download className="plani-btn">
+        Descargar Planificación
+      </a>
     </div>
   );
 };
