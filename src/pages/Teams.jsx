@@ -1,6 +1,12 @@
 import { FaCheckCircle, FaWhatsapp, FaInstagram, FaDownload, FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "../pages/Teams.css"; 
+import "../pages/Teams.css";
+
+// 👇 asegurate que estos archivos existan EXACTAMENTE con esos nombres y extensión
+import remera from "../assets/remeraa.jpg";
+import atleta from "../assets/atleta.jpg";
+import gym1 from "../assets/gym1.jpg";
+import banca from "../assets/banca.jpg";
 
 export default function TeamJoin() {
   return (
@@ -19,20 +25,10 @@ export default function TeamJoin() {
           y presencia en nuestras redes.
         </p>
         <div className="team-cta">
-          <a
-            className="btn btn--primary"
-            href="https://wa.me/541138986902"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="btn btn--primary" href="https://wa.me/541138986902" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp style={{ marginRight: 8 }} /> Escribinos por WhatsApp
           </a>
-          <a
-            className="btn btn--outline"
-            href="https://www.instagram.com/primalstrength.jh/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="btn btn--outline" href="https://www.instagram.com/primalstrength.jh/" target="_blank" rel="noopener noreferrer">
             <FaInstagram style={{ marginRight: 8 }} /> DM en Instagram
           </a>
           <a className="btn btn--ghost" href="/teams.pdf" download>
@@ -47,14 +43,14 @@ export default function TeamJoin() {
         <div className="benefit">
           <FaCheckCircle className="benefit__icon" aria-hidden="true" />
           <div>
-            <h3>Kit de bienvenida</h3>
-            <p>Remera + hoodie cada 6 meses para usar en tus contenidos.</p>
+            <h3>Kit primalstrength</h3>
+            <p>Remera over + Creatina.</p>
           </div>
         </div>
         <div className="benefit">
           <FaCheckCircle className="benefit__icon" aria-hidden="true" />
           <div>
-            <h3>30% off permanente</h3>
+            <h3>10% off permanente</h3>
             <p>Descuento exclusivo para vos y campañas con comisiones.</p>
           </div>
         </div>
@@ -69,10 +65,11 @@ export default function TeamJoin() {
 
       {/* GALERÍA */}
       <section className="team-gallery" aria-label="Galería del team">
-        <img src="/images/team-1.jpg" alt="Atleta con hoodie PrimalStrength entrenando peso muerto" />
-        <img src="/images/team-2.jpg" alt="Detalle de remera PrimalStrength, logo frontal" />
-        <img src="/images/team-3.jpg" alt="Sesión de entrenamiento en gym con merch PrimalStrength" />
-        <img src="/images/team-4.jpg" alt="Close-up de hoodie, cordones y estampado" />
+        {/* 👇 IMPORTANTE: había un error antes: faltaba un ESPACIO entre src y alt */}
+        <img src={atleta} alt="Atleta en PrimalStrength entrenando peso muerto" />
+        <img src={gym1} alt="Sesión de entrenamiento en gym con merch PrimalStrength" />
+        <img src={remera} alt="Detalle de remera PrimalStrength, logo frontal" />
+        <img src={banca} alt="Press banca con hoodie PrimalStrength" />
       </section>
 
       {/* PASOS + REQUISITOS */}
