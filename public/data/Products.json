@@ -1,0 +1,74 @@
+[
+  {
+    "id": "tee-black-001",
+    "name": "Remera Oversize Negra",
+    "price": 19999,
+    "currency": "ARS",
+    "image": "/images/merch/tee-black.jpg",
+    "tags": ["oversize", "unisex", "powerlifting"],
+    "inStock": true
+  },
+  {
+    "id": "tee-white-001",
+    "name": "Remera Blanca Logo Rojo",
+    "price": 19999,
+    "currency": "ARS",
+    "image": "/images/merch/tee-white.jpg",
+    "tags": ["unisex", "gymwear"],
+    "inStock": true
+  },
+  {
+    "id": "hoodie-red-001",
+    "name": "Buzo Hoodie Rojo",
+    "price": 34999,
+    "currency": "ARS",
+    "image": "/images/merch/hoodie-red.jpg",
+    "tags": ["hoodie", "invierno", "powerlifting"],
+    "inStock": false
+  },
+  {
+    "id": "hoodie-black-002",
+    "name": "Hoodie Negra Classic",
+    "price": 34999,
+    "currency": "ARS",
+    "image": "/images/merch/hoodie-black.jpg",
+    "tags": ["hoodie", "unisex"],
+    "inStock": true
+  },
+  {
+    "id": "cap-iron-001",
+    "name": "Gorra Iron Logo",
+    "price": 9999,
+    "currency": "ARS",
+    "image": "/images/merch/cap-iron.jpg",
+    "tags": ["accesorio", "unisex"],
+    "inStock": true
+  },
+  {
+    "id": "strap-001",
+    "name": "Straps de Entrenamiento",
+    "price": 8999,
+    "currency": "ARS",
+    "image": "/images/merch/strap.jpg",
+    "tags": ["lifting", "accesorio"],
+    "inStock": true
+  },
+  {
+    "id": "belt-001",
+    "name": "Cinturón de Powerlifting Cuero",
+    "price": 25999,
+    "currency": "ARS",
+    "image": "/images/merch/belt.jpg",
+    "tags": ["powerlifting", "cuero"],
+    "inStock": true
+  },
+  {
+    "id": "shaker-001",
+    "name": "Shaker Fuerza Total",
+    "price": 5999,
+    "currency": "ARS",
+    "image": "/images/merch/shaker.jpg",
+    "tags": ["accesorio", "nutrición"],
+    "inStock": true
+  }
+]

@@ -25,7 +25,7 @@ const Home = () => {
 
         {/* Subtítulos */}
         <div className="home-subtitles">
-          <span><FaDumbbell className="sub-icon" /> Centro de Salud y Fuerza</span>
+          <span><FaDumbbell className="sub-icon" /> Zona de Carga</span>
           <span><FaBolt className="sub-icon" /> Powerlifting</span>
         </div>
 
@@ -68,7 +68,9 @@ const Home = () => {
         </a>
 
         {/* Botón unir */}
-        <button className="home-join">Comprar Merch</button>
+        <Link to="/merch" className="home-join">
+           Comprar Merch
+        </Link>
       </div>
 
       {/* Footer */}

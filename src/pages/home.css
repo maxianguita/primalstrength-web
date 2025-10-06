@@ -1,4 +1,9 @@
 /* ============ Base global del Home (mobile-first) ============ */
+:root {
+  --cta-h: 56px;           /* altura mínima del botón flotante */
+  --cta-gap: 16px;         /* aire entre CTA y borde inferior */
+}
+
 .home-container {
   min-height: 100vh;
   display: flex;
@@ -21,8 +26,12 @@
   align-items: center;
   justify-content: center;     
   flex-grow: 1;
-  padding: 1.5rem 1rem 120px;   /* 👈 padding-bottom extra para que los links no queden tapados */
-  gap: 1.25rem;                
+  padding: 1.5rem 1rem;
+  gap: 1.25rem; 
+  /* 👇 espacio extra dinámico para que el CTA no tape el contenido */
+  padding-bottom: calc(
+    var(--cta-h) + var(--cta-gap) + env(safe-area-inset-bottom, 0px) + 24px
+  );              
 }
 
 /* Logo */
@@ -87,8 +96,8 @@
   cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
   text-decoration: none;       
-  position: relative;   /* 👈 necesario para aplicar z-index */
-  z-index: 1101;        /* 👈 siempre por encima del botón flotante */
+  position: relative;   
+  z-index: 1101;        /* por encima del CTA */
 }
 .home-buttons button:hover,
 .home-buttons a:hover {
@@ -105,7 +114,7 @@
   margin: 1.25rem 0;
   transition: transform 0.2s ease, color 0.2s ease;
   position: relative;
-  z-index: 1;  /* 👈 debajo de los botones */
+  z-index: 1;  
 }
 .home-instagram:hover {
   transform: scale(1.08);
@@ -120,7 +129,7 @@
 }
 .home-join {
   position: fixed;
-  bottom: 20px;                
+  bottom: calc(env(safe-area-inset-bottom, 0px) + var(--cta-gap));
   left: 50%;
   transform: translateX(-50%);
   width: min(90%, 420px);      
@@ -152,6 +161,8 @@
   justify-content: center;
   align-items: center;
   gap: 0.35rem;
+  /* 👇 espacio adicional para evitar que el CTA lo tape */
+  padding-bottom: calc(var(--cta-h) + var(--cta-gap));
 }
 .home-footer span { cursor: pointer; }
 .home-footer span:hover { color: #fef9f9; }
@@ -160,18 +171,18 @@
 
 /* Tablets medianas */
 @media (min-width: 601px) and (max-width: 900px) {
-  .home-main { padding: 2rem 1.5rem 140px; } /* 👈 más espacio en tablets */
+  .home-main { padding: 2rem 1.5rem 140px; } 
   .home-title { font-size: 1.9rem; }
   .home-buttons { max-width: 380px; }
   .home-join {
-    bottom: 28px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 28px);
     width: min(88%, 500px);
   }
 }
 
 /* Desktop */
 @media (min-width: 901px) {
-  .home-main { padding: 2rem 6rem 160px; } /* 👈 padding extra abajo */
+  .home-main { padding: 2rem 6rem 160px; } 
   .home-title { font-size: 2rem; }
   .home-buttons {
     max-width: 420px;
@@ -198,46 +209,10 @@
     padding: 1rem 0;
   }
 }
-/* ================= Animaciones logo (solo móvil) ================= */
 
-/* Respeto accesibilidad: si el usuario prefiere menos movimiento, no animamos */
-@media (max-width: 600px) {
-  @media (prefers-reduced-motion: no-preference) {
-
-    /* Variante A — LATIR (scale suave) */
-    .home-logo {
-      animation: heartbeat 1.6s ease-in-out infinite;
-      will-change: transform, box-shadow;
-    }
-    @keyframes heartbeat {
-      0%   { transform: scale(1);       box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-      25%  { transform: scale(1.06);    box-shadow: 0 14px 30px rgba(0,0,0,0.18); }
-      40%  { transform: scale(1);       box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-      60%  { transform: scale(1.06);    box-shadow: 0 14px 30px rgba(0,0,0,0.18); }
-      100% { transform: scale(1);       box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-    }
-
-    /* Variante B — TITILAR (parpadeo sutil). 
-       👉 Si preferís esta, quitá la animación de .home-logo arriba
-       y aplicá esta clase alternativa en el JSX: className="home-logo logo-blink" */
-    .logo-blink {
-      animation: blink 1.8s ease-in-out infinite;
-      will-change: opacity;
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      40%      { opacity: .82; }
-      50%      { opacity: .66; }
-      60%      { opacity: .82; }
-    }
+/* Extra: móviles muy chicos (menos de 360px) */
+@media (max-width: 360px) {
+  .home-join {
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 20px);
   }
 }
-
-/* En desktop mantenemos el hover que ya tenías */
-@media (min-width: 901px) {
-  .home-logo:hover {
-    transform: scale(1.12);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  }
-}
-
