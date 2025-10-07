@@ -47,9 +47,9 @@ const Home = () => {
           </a>
 
           {/* Facebook */}
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
             <FaFacebookF className="btn-icon" /> Seguinos Facebook
-          </a>
+          </a> */}
 
           {/* Link interno a Teams */}
           <Link to="/teams" className="home-link">
@@ -68,6 +68,7 @@ const Home = () => {
         </a>
 
         {/* Botón unir */}
+         
         <Link to="/merch" className="home-join">
            Comprar Merch
         </Link>

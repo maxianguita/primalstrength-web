@@ -140,3 +140,112 @@
 @media (min-width: 1280px) {
   .merch__grid { gap: 20px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 }
+/* Secciones */
+.merch__section {
+  padding: 8px 0 24px;
+  border-top: 1px solid #1f1f1f;
+  margin-top: 8px;
+}
+
+.merch__section:first-of-type {
+  border-top: 0;
+  margin-top: 0;
+}
+
+.merch__sectionTitle {
+  margin: 8px 0 14px;
+  font-size: 1rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f0f0f0;
+}
+
+.merch__badge {
+  display: inline-block;
+  font-size: .7rem;
+  padding: 2px 8px;
+  border: 1px solid #2a2a2a;
+  border-radius: 999px;
+  color: #bdbdbd;
+}
+v/* --- Filtros --- */
+.merch__filters{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 16px 4px;
+}
+
+.filters__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 640px){
+  .filters__grid{ grid-template-columns: repeat(4, 1fr); gap: 12px; }
+}
+
+.filters__field{
+  display: grid;
+  gap: 6px;
+}
+
+.filters__label{
+  font-size: .75rem;
+  color: #bdbdbd;
+}
+
+.filters__control{
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  background: #121212;
+  color: #eee;
+  outline: none;
+}
+
+.filters__control:focus{
+  border-color: #3a3a3a;
+  box-shadow: 0 0 0 2px rgba(196,33,18,.25);
+}
+
+.filters__clear{
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  color: #d6d6d6;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.filters__clear:hover{
+  background: #171717;
+}
+
+/* Secciones (ya las tenías, las repito por si falta algo) */
+.merch__section {
+  padding: 8px 0 24px;
+  border-top: 1px solid #1f1f1f;
+  margin-top: 8px;
+}
+.merch__section:first-of-type { border-top: 0; margin-top: 0; }
+.merch__sectionTitle {
+  margin: 8px 0 14px;
+  font-size: 1rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f0f0f0;
+}
+.merch__badge {
+  display: inline-block;
+  font-size: .7rem;
+  padding: 2px 8px;
+  border: 1px solid #2a2a2a;
+  border-radius: 999px;
+  color: #bdbdbd;
+}

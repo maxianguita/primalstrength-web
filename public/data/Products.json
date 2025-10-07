@@ -1,10 +1,13 @@
+
+
+
 [
   {
     "id": "tee-black-001",
     "name": "Remera Oversize Negra",
     "price": 19999,
     "currency": "ARS",
-    "image": "/images/merch/tee-black.jpg",
+    "image": "../data/remera.png",
     "tags": ["oversize", "unisex", "powerlifting"],
     "inStock": true
   },
@@ -13,7 +16,7 @@
     "name": "Remera Blanca Logo Rojo",
     "price": 19999,
     "currency": "ARS",
-    "image": "/images/merch/tee-white.jpg",
+    "image": "../data/over.png",
     "tags": ["unisex", "gymwear"],
     "inStock": true
   },
@@ -22,7 +25,7 @@
     "name": "Buzo Hoodie Rojo",
     "price": 34999,
     "currency": "ARS",
-    "image": "/images/merch/hoodie-red.jpg",
+    "image": "../data/hoodie.png",
     "tags": ["hoodie", "invierno", "powerlifting"],
     "inStock": false
   },
@@ -37,10 +40,10 @@
   },
   {
     "id": "cap-iron-001",
-    "name": "Gorra Iron Logo",
+    "name": "Musculosas",
     "price": 9999,
     "currency": "ARS",
-    "image": "/images/merch/cap-iron.jpg",
+    "image": "../data/musculosa.png",
     "tags": ["accesorio", "unisex"],
     "inStock": true
   },
@@ -64,10 +67,10 @@
   },
   {
     "id": "shaker-001",
-    "name": "Shaker Fuerza Total",
-    "price": 5999,
+    "name": "Creatina monohidratada 300g",
+    "price": 23999,
     "currency": "ARS",
-    "image": "/images/merch/shaker.jpg",
+    "image": "/data/creatina.webp",
     "tags": ["accesorio", "nutrición"],
     "inStock": true
   }

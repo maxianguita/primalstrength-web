@@ -144,7 +144,7 @@
   animation: pulse 1.2s infinite;
 }
 .home-join:hover {
-  background-color: #504c4c;
+  background-color: #d30808;
   color: #fff;
   transform: translateX(-50%) translateY(-2px); 
 }
@@ -176,7 +176,20 @@
   .home-buttons { max-width: 380px; }
   .home-join {
     bottom: calc(env(safe-area-inset-bottom, 0px) + 28px);
-    width: min(88%, 500px);
+    width: min(58%, 500px);
+  }
+}
+@media (max-width: 600px) {
+  .home-join {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(52%, 320px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -211,8 +224,4 @@
 }
 
 /* Extra: móviles muy chicos (menos de 360px) */
-@media (max-width: 360px) {
-  .home-join {
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 20px);
-  }
-}
+
