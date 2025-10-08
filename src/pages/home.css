@@ -2,6 +2,7 @@
 :root {
   --cta-h: 56px;           /* altura mínima del botón flotante */
   --cta-gap: 16px;         /* aire entre CTA y borde inferior */
+  
 }
 
 .home-container {
@@ -12,6 +13,7 @@
   background-color: #111212;
   color: #fff;
   font-family: Arial, sans-serif;
+  
 
   /* Patrón sutil */
   background-image:
@@ -142,6 +144,15 @@
   cursor: pointer;
   z-index: 1000;
   animation: pulse 1.2s infinite;
+   font-weight: 900;                 /* letra más marcada */
+  text-transform: uppercase;        /* mayúsculas estilo marca */
+  letter-spacing: .02em;            /* leve tracking para legibilidad */
+  font-size: clamp(.95rem, 3.2vw, 1.05rem);
+  line-height: 1;                   /* evita desalineos verticales */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none;  
+   text-decoration: none !important;
 }
 .home-join:hover {
   background-color: #d30808;
@@ -185,8 +196,8 @@
     transform: translateX(-50%);
     width: min(52%, 320px);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;    /* centrado vertical */
+    justify-content: center;/* centrado horizontal */
     text-align: center;
     padding-left: 16px;
     padding-right: 16px;

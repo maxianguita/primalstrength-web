@@ -25,7 +25,7 @@ const Home = () => {
 
         {/* Subtítulos */}
         <div className="home-subtitles">
-          <span><FaDumbbell className="sub-icon" /> Zona de Carga</span>
+          <span><FaDumbbell className="sub-icon" /> Zona de Bienestar y Salud</span>
           <span><FaBolt className="sub-icon" /> Powerlifting</span>
         </div>
 

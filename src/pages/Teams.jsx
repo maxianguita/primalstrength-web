@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import "../pages/Teams.css";
 
 // 👇 asegurate que estos archivos existan EXACTAMENTE con esos nombres y extensión
-import remera from "../assets/remeraa.jpg";
+import remera from "../assets/hermano.jpg";
 import atleta from "../assets/atleta.jpg";
 import gym1 from "../assets/gym1.jpg";
-import banca from "../assets/banca.jpg";
+import banca from "../assets/gyms2.jpg";
 
 export default function TeamJoin() {
   return (

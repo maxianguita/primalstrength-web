@@ -1,29 +1,46 @@
 
-
-
 [
   {
     "id": "tee-black-001",
     "name": "Remera Oversize Negra",
-    "price": 19999,
+    "price": 45000,
     "currency": "ARS",
     "image": "../data/remera.png",
     "tags": ["oversize", "unisex", "powerlifting"],
     "inStock": true
   },
+  
   {
     "id": "tee-white-001",
-    "name": "Remera Blanca Logo Rojo",
-    "price": 19999,
+    "name": "Remera Roja y Negra ",
+    "price": 45000,
     "currency": "ARS",
-    "image": "../data/over.png",
+    "image": "../data/remera10.png",
+    "tags": ["unisex", "gymwear"],
+    "inStock": true
+  },
+  {
+    "id": "tee-white-001",
+    "name": "Remera Roja y Negra ",
+    "price": 45000,
+    "currency": "ARS",
+    "image": "../data/remera5.jpg",
+    "tags": ["unisex", "gymwear"],
+    "inStock": true
+  },
+  {
+    "id": "tee-white-001",
+    "name": "Remera gorilla ",
+    "price": 45000,
+    "currency": "ARS",
+    "image": "../data/remera2.jpg",
     "tags": ["unisex", "gymwear"],
     "inStock": true
   },
   {
     "id": "hoodie-red-001",
-    "name": "Buzo Hoodie Rojo",
-    "price": 34999,
+    "name": "Buzo Hoodie Black",
+    "price": 64999,
     "currency": "ARS",
     "image": "../data/hoodie.png",
     "tags": ["hoodie", "invierno", "powerlifting"],
@@ -31,19 +48,19 @@
   },
   {
     "id": "hoodie-black-002",
-    "name": "Hoodie Negra Classic",
-    "price": 34999,
+    "name": "Remera Oversize gorilla",
+    "price": 45000,
     "currency": "ARS",
-    "image": "/images/merch/hoodie-black.jpg",
+    "image": "../data/remera6.jpg",
     "tags": ["hoodie", "unisex"],
     "inStock": true
   },
   {
     "id": "cap-iron-001",
-    "name": "Musculosas",
-    "price": 9999,
+    "name": "Remeras oversize Gorilla",
+    "price": 45000,
     "currency": "ARS",
-    "image": "../data/musculosa.png",
+    "image": "../data/remera1.jpg",
     "tags": ["accesorio", "unisex"],
     "inStock": true
   },
