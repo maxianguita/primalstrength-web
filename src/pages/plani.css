@@ -7,12 +7,12 @@
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem;
-  position: relative; /* necesario para la flecha */
+  position: relative; 
 }
 
 /* Título */
 .plani-title {
-  font-size: 1.8rem;   /* más chico en mobile */
+  font-size: 1.8rem;   
   font-weight: 800;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -92,7 +92,7 @@
   transition: color 0.2s ease, transform 0.2s ease;
 }
 .plani-back:hover {
-  color: #c42112;   /* rojo de marca */
+  color: #c42112;   
   transform: translateX(-2px);
 }
 

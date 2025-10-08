@@ -1,7 +1,7 @@
 /* ============ Base global del Home (mobile-first) ============ */
 :root {
-  --cta-h: 56px;           /* altura mínima del botón flotante */
-  --cta-gap: 16px;         /* aire entre CTA y borde inferior */
+  --cta-h: 56px;           
+  --cta-gap: 16px;         
   
 }
 
@@ -136,26 +136,26 @@
   transform: translateX(-50%);
   width: min(90%, 420px);      
   padding: 0.9rem 1rem;
-  background-color: #f5f1f1;
-  color: #070707;
+  background-color: #f5f1f148;
+  color: #fffcfc;
   border: none;
   border-radius: 0.9rem;
   font-weight: 800;
   cursor: pointer;
   z-index: 1000;
   animation: pulse 1.2s infinite;
-   font-weight: 900;                 /* letra más marcada */
-  text-transform: uppercase;        /* mayúsculas estilo marca */
-  letter-spacing: .02em;            /* leve tracking para legibilidad */
+   font-weight: 900;                 
+  text-transform: uppercase;        
+  letter-spacing: .02em;            
   font-size: clamp(.95rem, 3.2vw, 1.05rem);
-  line-height: 1;                   /* evita desalineos verticales */
+  line-height: 1;                  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border: none;  
    text-decoration: none !important;
 }
 .home-join:hover {
-  background-color: #d30808;
+  background-color: #3a3939;
   color: #fff;
   transform: translateX(-50%) translateY(-2px); 
 }
@@ -196,8 +196,8 @@
     transform: translateX(-50%);
     width: min(52%, 320px);
     display: flex;
-    align-items: center;    /* centrado vertical */
-    justify-content: center;/* centrado horizontal */
+    align-items: center;    
+    justify-content: center;
     text-align: center;
     padding-left: 16px;
     padding-right: 16px;
@@ -234,5 +234,5 @@
   }
 }
 
-/* Extra: móviles muy chicos (menos de 360px) */
+
 
