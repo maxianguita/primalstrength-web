@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "./merch.css";
-import products from "../../public/data/Products.json"; 
+import products from "../data/Products.json"; 
 
 // Utilidad: formatear moneda
 function money(n, currency = "ARS") {
@@ -106,6 +106,7 @@ export default function Merch({ items }) {
   const [minP, setMinP] = useState("");             
   const [maxP, setMaxP] = useState("");
   const [sort, setSort] = useState("name_asc");     
+  const [showFilters, setShowFilters] = useState(false); // nuevo
 
   // Precalcular min/max del dataset
   const { datasetMin, datasetMax } = useMemo(() => {
@@ -184,68 +185,80 @@ export default function Merch({ items }) {
           <h1 className="merch__title">Primal Strength Shop</h1>
         </div>
         <span className="merch__count">{totalFiltered} / {base.length} items</span>
+        <button className="merch__filtersBtn" onClick={() => setShowFilters(true)}>
+          Filtros
+        </button>
       </header>
 
-      {/* Filtros */}
-      <div className="merch__filters">
-        <div className="filters__grid">
-          <label className="filters__field">
-            <span className="filters__label">Categoría</span>
-            <select
-              className="filters__control"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            >
-              <option value="todos">Todos</option>
-              <option value="ropa">Ropa</option>
-              <option value="suplementos">Suplementos</option>
-              <option value="otros">Otros</option>
-            </select>
-          </label>
+      {/* Panel de filtros */}
+      {showFilters && (
+        <div className="filters__panel">
+          <div className="filters__overlay" onClick={() => setShowFilters(false)} />
+          <div className="filters__content">
+            <button className="filters__close" onClick={() => setShowFilters(false)}>
+              &times; 
+            </button>
 
-          <label className="filters__field">
-            <span className="filters__label">Precio mínimo</span>
-            <input
-              className="filters__control"
-              type="number"
-              placeholder={datasetMin ? String(datasetMin) : "0"}
-              value={minP}
-              min={0}
-              onChange={(e) => setMinP(e.target.value)}
-            />
-          </label>
+            <div className="filters__grid">
+              <label className="filters__field">
+                <span className="filters__label">Categoría</span>
+                <select
+                  className="filters__control"
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  <option value="todos">Todos</option>
+                  <option value="ropa">Ropa</option>
+                  <option value="suplementos">Suplementos</option>
+                  <option value="otros">Otros</option>
+                </select>
+              </label>
 
-          <label className="filters__field">
-            <span className="filters__label">Precio máximo</span>
-            <input
-              className="filters__control"
-              type="number"
-              placeholder={datasetMax ? String(datasetMax) : "0"}
-              value={maxP}
-              min={0}
-              onChange={(e) => setMaxP(e.target.value)}
-            />
-          </label>
+              <label className="filters__field">
+                <span className="filters__label">Precio mínimo</span>
+                <input
+                  className="filters__control"
+                  type="number"
+                  placeholder={datasetMin ? String(datasetMin) : "0"}
+                  value={minP}
+                  min={0}
+                  onChange={(e) => setMinP(e.target.value)}
+                />
+              </label>
 
-          <label className="filters__field">
-            <span className="filters__label">Ordenar</span>
-            <select
-              className="filters__control"
-              value={sort}
-              onChange={(e) => setSort(e.target.value)}
-            >
-              <option value="name_asc">A–Z</option>
-              <option value="name_desc">Z–A</option>
-              <option value="price_asc">Precio ↑</option>
-              <option value="price_desc">Precio ↓</option>
-            </select>
-          </label>
+              <label className="filters__field">
+                <span className="filters__label">Precio máximo</span>
+                <input
+                  className="filters__control"
+                  type="number"
+                  placeholder={datasetMax ? String(datasetMax) : "0"}
+                  value={maxP}
+                  min={0}
+                  onChange={(e) => setMaxP(e.target.value)}
+                />
+              </label>
+
+              <label className="filters__field">
+                <span className="filters__label">Ordenar</span>
+                <select
+                  className="filters__control"
+                  value={sort}
+                  onChange={(e) => setSort(e.target.value)}
+                >
+                  <option value="name_asc">A–Z</option>
+                  <option value="name_desc">Z–A</option>
+                  <option value="price_asc">Precio ↑</option>
+                  <option value="price_desc">Precio ↓</option>
+                </select>
+              </label>
+            </div>
+
+            <button className="filters__clear" type="button" onClick={clearFilters}>
+              Limpiar filtros
+            </button>
+          </div>
         </div>
-
-        <button className="filters__clear" type="button" onClick={clearFilters}>
-          Limpiar filtros
-        </button>
-      </div>
+      )}
 
       <main className="merch__main">
         {totalFiltered === 0 && (
