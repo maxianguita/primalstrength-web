@@ -33,7 +33,7 @@
     "name": "Remera gorilla ",
     "price": 45000,
     "currency": "ARS",
-    "image": "../data/remera2.jpg",
+    "image": "../data/remera1.jpg",
     "tags": ["unisex", "gymwear"],
     "inStock": true
   },

@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "./merch.css";
-import products from "../data/Products.json"; 
+import products from "../../public/data/Products.json";
 
 // Utilidad: formatear moneda
 function money(n, currency = "ARS") {
