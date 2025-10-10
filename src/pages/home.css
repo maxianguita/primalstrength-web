@@ -10,15 +10,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #111212;
+  background-color: #000000;
   color: #fff;
   font-family: Arial, sans-serif;
   
 
   /* Patrón sutil */
   background-image:
-    linear-gradient(#2c2c2c, transparent),
-    linear-gradient(90deg, #2c2c2c, transparent);
+    linear-gradient(#151313, transparent),
+    linear-gradient(90deg, #353434, transparent);
 }
 
 /* Contenido central */
