@@ -64,30 +64,30 @@
     "tags": ["accesorio", "unisex"],
     "inStock": true
   },
-  {
-    "id": "strap-001",
-    "name": "Straps de Entrenamiento",
-    "price": 8999,
-    "currency": "ARS",
-    "image": "/images/merch/strap.jpg",
-    "tags": ["lifting", "accesorio"],
-    "inStock": true
-  },
-  {
-    "id": "belt-001",
-    "name": "Cinturón de Powerlifting Cuero",
-    "price": 25999,
-    "currency": "ARS",
-    "image": "/images/merch/belt.jpg",
-    "tags": ["powerlifting", "cuero"],
-    "inStock": true
-  },
+  
+
   {
     "id": "shaker-001",
     "name": "Creatina monohidratada 300g",
     "price": 23999,
     "currency": "ARS",
     "image": "/data/creatina.webp",
+    "tags": ["accesorio", "nutrición"],
+    "inStock": true
+  },{
+    "id": "shaker-001",
+    "name": "Whey protein 7900g",
+    "price": 30800,
+    "currency": "ARS",
+    "image": "/data/prote.webp",
+    "tags": ["accesorio", "nutrición"],
+    "inStock": true
+  },{
+    "id": "shaker-001",
+    "name": "Whey Protein True Made Chocolate x 930 g",
+    "price": 67200,
+    "currency": "ARS",
+    "image": "/data/prote2.webp",
     "tags": ["accesorio", "nutrición"],
     "inStock": true
   }
