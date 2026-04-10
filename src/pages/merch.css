@@ -1,311 +1,253 @@
-/* ============ Layout base (mobile-first) ============ */
-.merch {
-  min-height: 100vh;
-  background: #0b0b0b;
-  color: #eaeaea;
-  display: flex;
-  flex-direction: column;
+:root {
+  --primary: #e2ff00;
+  --bg: #050505;
+  --surface: #121212;
+  --surface-light: #1f1f1f;
+  --text: #ffffff;
+  --text-dim: #a0a0a0;
+  --wa-green: #25D366;
 }
 
-/* Header con back */
+.merch-icon {
+  color: #000;
+}
+/* HEADER */
 .merch__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1rem;
   position: sticky;
   top: 0;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 12px 14px;
-  background: rgba(10,10,10,0.85);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid #1f1f1f;
+  z-index: 50;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #222;
 }
 
-.merch__left {
-  display: inline-flex;
+.merch__headerLeft {
+  display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .merch__back {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 9999px;
-  border: 1px solid #262626;
-  color: #e6e6e6;
-  background: #131313;
-  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
-}
-.merch__back:hover {
-  transform: translateY(-1px);
-  background: #1a1a1a;
-  border-color: #2c2c2c;
-}
-
-.merch__title {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 900;
-}
-.merch__count {
-  font-size: 0.7rem;
-  color: #9a9a9a;
-}
-
-.merch__main {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 12px;
-  flex: 1;
-}
-
-.merch__empty {
-  padding: 20px 8px;
-  color: #bdbdbd;
-}
-
-/* ============ Filtros ============ */
-.merch__filters {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 10px 12px 4px;
-}
-
-.filters__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-
-/* a partir de 400px: 2 columnas */
-@media (min-width: 400px) {
-  .filters__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* a partir de 640px: 4 columnas */
-@media (min-width: 640px) {
-  .filters__grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-  }
-}
-
-.filters__field {
-  display: grid;
-  gap: 6px;
-}
-
-.filters__label {
-  font-size: 0.75rem;
-  color: #bdbdbd;
-}
-
-.filters__control {
-  height: 44px;
-  padding: 0 10px;
-  border-radius: 10px;
-  border: 1px solid #2a2a2a;
-  background: #121212;
-  color: #eee;
-  outline: none;
-}
-
-.filters__control:focus {
-  border-color: #3a3a3a;
-  box-shadow: 0 0 0 2px rgba(196,33,18,0.25);
-}
-
-.filters__clear {
-  margin-top: 10px;
-  background: transparent;
-  border: 1px solid #2a2a2a;
-  color: #d6d6d6;
-  padding: 10px 12px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.filters__clear:hover {
-  background: #171717;
-}
-
-/* Botón abrir panel filtros */
-.merch__filtersBtn {
-  padding: 8px 12px;
-  background: #1c1c1c;
-  border: 1px solid #2a2a2a;
-  border-radius: 10px;
-  color: #eee;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-.merch__filtersBtn:hover {
-  background: #2a2a2a;
-}
-
-/* ============ Panel lateral de filtros ============ */
-.filters__panel {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.filters__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-
-.filters__content {
-  position: relative;
-  width: 320px;
-  max-width: 80%;
-  background: #111;
-  color: #fff;
-  padding: 1.5rem;
-  overflow-y: auto;
-  box-shadow: -4px 0 12px rgba(0,0,0,0.5);
-  animation: slideIn 0.3s ease forwards;
-}
-
-.filters__close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: transparent;
-  border: none;
+  text-decoration: none;
+  color: var(--text);
   font-size: 1.5rem;
-  color: #fff;
-  cursor: pointer;
+  line-height: 1;
 }
 
-@keyframes slideIn {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
+.merch__mainTitle {
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
 }
 
-/* ============ Secciones ============ */
-.merch__section {
-  padding: 8px 0 20px;
-  border-top: 1px solid #1f1f1f;
-  margin-top: 8px;
-}
-.merch__section:first-of-type {
-  border-top: 0;
-  margin-top: 0;
-}
-
-.merch__sectionTitle {
-  margin: 8px 0 12px;
-  font-size: 1rem;
-  font-weight: 900;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #f0f0f0;
-}
-.merch__badge {
-  display: inline-block;
-  font-size: 0.7rem;
-  padding: 2px 8px;
-  border: 1px solid #2a2a2a;
-  border-radius: 999px;
-  color: #bdbdbd;
+.merch__filterToggle {
+  background: var(--primary);
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
-/* ============ Grid de productos ============ */
-.merch__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 12px;
-}
-@media (min-width: 640px) {
-  .merch__grid {
-    gap: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  }
-}
-@media (min-width: 1024px) {
-  .merch__grid {
-    gap: 18px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-}
-@media (min-width: 1280px) {
-  .merch__grid {
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  }
-}
-
-/* ============ Card ============ */
-.card {
-  background: #111;
-  border: 1px solid #1f1f1f;
-  border-radius: 16px;
+/* EMBLA CAROUSEL - MÓVIL 100% */
+.embla {
   overflow: hidden;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  padding: 1rem 0; /* Quitamos padding lateral para que la card use el ancho */
 }
-.card:hover {
-  transform: translateY(-2px);
-  border-color: #2a2a2a;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  flex: 0 0 100%; /* Una imagen completa por vez en móvil */
+  min-width: 0;
+  padding: 0 1rem; /* El espacio lo damos por dentro del slide */
+}
+
+/* CARD - Diseño Minimalista */
+.card {
+  background: var(--surface);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--surface-light);
+  display: flex;
+  flex-direction: column;
+  height: 480px; /* Un poco más alta para móvil */
 }
 
 .card__media {
   position: relative;
-  aspect-ratio: 1 / 1;
-  background: #0f0f0f;
-}
-@media (min-width: 640px) {
-  .card__media { aspect-ratio: 4 / 5; }
+  height: 320px;
+  width: 100%;
 }
 
 .card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
-.card__placeholder {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  color: #666;
-  font-size: 0.85rem;
+
+.card__priceBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--primary);
+  color: #000;
+  padding: 6px 12px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  border-radius: 8px;
 }
 
 .card__body {
-  padding: 10px 12px 12px;
-  display: grid;
-  gap: 6px;
-}
-.card__title {
-  margin: 0;
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: #f2f2f2;
-  line-height: 1.3;
-}
-.card__price {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #e7e7e7;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
 }
 
-/* ============ Footer ============ */
-.merch__footer {
-  padding: 20px 12px;
-  color: #8c8c8c;
+.card__title {
+  font-size: 1.1rem;
+  margin: 0 0 5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.card__price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.card__btn.whatsapp {
+  width: 100%;
+  background: var(--wa-green);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.card__btn.whatsapp:active {
+  transform: scale(0.96);
+  background: #1ebe5d;
+}
+
+/* FILTROS (Igual que antes pero pulidos) */
+.filters {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.filters__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.filters__sheet {
+  position: relative;
+  background: #0d0d0d;
+  border-top: 1px solid #333;
+  border-radius: 24px 24px 0 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.filters__chip {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.8rem;
+}
+
+.filters__chip.active {
+  background: var(--primary);
+  color: #000;
+  font-weight: 700;
+}
+
+.filters__footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  border-top: 1px solid #222;
+  padding-top: 1rem;
+}
+
+.filters__apply {
+  background: var(--text);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+/* DESKTOP - Volvemos a Grilla */
+@media (min-width: 768px) {
+  .embla__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+  .embla__slide {
+    flex: unset;
+    padding: 0;
+  }
+  .card { height: 450px; }
+}
+/* SECTION HEADER - Centrado y con aire */
+.merch__sectionHeader {
+  padding: 3rem 1rem 2rem; /* Más espacio arriba (3rem) para que respire */
+  display: flex;
+  flex-direction: column; /* Cambiamos a columna para facilitar el centrado */
+  align-items: center;    /* Centra horizontalmente */
   text-align: center;
-  border-top: 1px solid #1f1f1f;
+}
+
+.merch__sectionTitle {
+  font-size: 1.5rem;      /* Un poco más grande para que destaque */
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;    /* Espaciado entre letras para toque premium */
+  position: relative;
+  display: inline-block;
+}
+
+/* Opcional: Una pequeña línea decorativa debajo del título para separar más */
+.merch__sectionTitle::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--primary);
+  margin: 12px auto 0;    /* Margen de 12px arriba para separar la línea del texto */
+  border-radius: 2px;
 }

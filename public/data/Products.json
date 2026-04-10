@@ -1,94 +1,146 @@
-
 [
   {
-    "id": "tee-black-001",
-    "name": "Remera Oversize Negra",
-    "price": 45000,
+    "id": "remera-001",
+    "name": "Remera Primal Negra",
+    "price": 40000,
     "currency": "ARS",
-    "image": "../data/remera.png",
-    "tags": ["oversize", "unisex", "powerlifting"],
-    "inStock": true
-  },
-  
-  {
-    "id": "tee-white-001",
-    "name": "Remera Roja y Negra ",
-    "price": 45000,
-    "currency": "ARS",
-    "image": "../data/remera10.png",
-    "tags": ["unisex", "gymwear"],
+    "image": "/data/reme.jpeg",
+    "category": "ropa",
     "inStock": true
   },
   {
-    "id": "tee-white-001",
-    "name": "Remera Roja y Negra ",
-    "price": 45000,
+    "id": "remera-002",
+    "name": "Remera Dama",
+    "price": 30000,
     "currency": "ARS",
-    "image": "../data/remera5.jpg",
-    "tags": ["unisex", "gymwear"],
+    "image": "/data/reme1.jpeg",
+    "category": "ropa",
     "inStock": true
   },
   {
-    "id": "tee-white-001",
-    "name": "Remera gorilla ",
-    "price": 45000,
+    "id": "remera-003",
+    "name": "Remera Roja y Negra II",
+    "price": 40000,
     "currency": "ARS",
-    "image": "../data/remera1.jpg",
-    "tags": ["unisex", "gymwear"],
+    "image": "/data/reme2.jpeg",
+    "category": "ropa",
     "inStock": true
   },
   {
-    "id": "hoodie-red-001",
-    "name": "Buzo Hoodie Black",
-    "price": 64999,
+    "id": "remera-004",
+    "name": "Remera Primal Classic",
+    "price": 30000,
     "currency": "ARS",
-    "image": "../data/hoodie.png",
-    "tags": ["hoodie", "invierno", "powerlifting"],
+    "image": "/data/reme3.jpeg",
+    "category": "ropa",
+    "inStock": true
+  },
+  {
+    "id": "remera-005",
+    "name": "Remera Primal Premium",
+    "price": 40000,
+    "currency": "ARS",
+    "image": "/data/reme4.jpeg",
+    "category": "ropa",
     "inStock": false
   },
   {
-    "id": "hoodie-black-002",
-    "name": "Remera Oversize gorilla",
+    "id": "remera-006",
+    "name": "Remera Primal Black Edition",
     "price": 45000,
     "currency": "ARS",
-    "image": "../data/remera6.jpg",
-    "tags": ["hoodie", "unisex"],
+    "image": "/data/reme16.jpeg",
+    "category": "ropa",
     "inStock": true
   },
   {
-    "id": "cap-iron-001",
-    "name": "Remeras oversize Gorilla",
+    "id": "remera-007",
+    "name": "Remera Primal Oversize",
     "price": 45000,
     "currency": "ARS",
-    "image": "../data/remera1.jpg",
-    "tags": ["accesorio", "unisex"],
+    "image": "/data/reme6.jpeg",
+    "category": "ropa",
     "inStock": true
   },
-  
-
   {
-    "id": "shaker-001",
-    "name": "Creatina monohidratada 300g",
-    "price": 23999,
+    "id": "remera-008",
+    "name": "Remera Primal Fit",
+    "price": 40000,
     "currency": "ARS",
-    "image": "/data/creatina.webp",
-    "tags": ["accesorio", "nutrición"],
+    "image": "/data/reme7.jpeg",
+    "category": "ropa",
     "inStock": true
-  },{
-    "id": "shaker-001",
-    "name": "Whey protein 7900g",
-    "price": 30800,
+  },
+  {
+    "id": "remera-009",
+    "name": "Remera Primal Street",
+    "price": 40000,
     "currency": "ARS",
-    "image": "/data/prote.webp",
-    "tags": ["accesorio", "nutrición"],
+    "image": "/data/reme8.jpeg",
+    "category": "ropa",
     "inStock": true
-  },{
-    "id": "shaker-001",
-    "name": "Whey Protein True Made Chocolate x 930 g",
-    "price": 67200,
+  },
+  {
+    "id": "remera-010",
+    "name": "Remera Primal Power",
+    "price": 40000,
     "currency": "ARS",
-    "image": "/data/prote2.webp",
-    "tags": ["accesorio", "nutrición"],
+    "image": "/data/reme9.jpeg",
+    "category": "ropa",
+    "inStock": true
+  },
+  {
+    "id": "remera-011",
+    "name": "Remera Primal Elite",
+    "price": 40000,
+    "currency": "ARS",
+    "image": "/data/reme10.jpeg",
+    "category": "ropa",
+    "inStock": true
+  },
+  {
+    "id": "remera-012",
+    "name": "Remera Primal Core",
+    "price": 40000,
+    "currency": "ARS",
+    "image": "/data/reme11.jpeg",
+    "category": "ropa",
+    "inStock": true
+  },
+  {
+    "id": "remera-013",
+    "name": "Remera Primal Essential",
+    "price": 40000,
+    "currency": "ARS",
+    "image": "/data/reme12.jpeg",
+    "category": "ropa",
+    "inStock": true
+  },
+  {
+    "id": "remera-014",
+    "name": "Remera Primal Urban",
+    "price": 40000,
+    "currency": "ARS",
+    "image": "/data/reme13.jpeg",
+    "category": "ropa",
+    "inStock": true
+  },
+  {
+    "id": "remera-015",
+    "name": "Remera Primal Dark",
+    "price": 40000,
+    "currency": "ARS",
+    "image": "/data/reme14.jpeg",
+    "category": "ropa",
+    "inStock": true
+  },
+  {
+    "id": "remera-016",
+    "name": "Remera Primal Sport",
+    "price": 40000,
+    "currency": "ARS",
+    "image": "/data/reme15.jpeg",
+    "category": "ropa",
     "inStock": true
   }
 ]
